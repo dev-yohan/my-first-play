@@ -1,0 +1,9 @@
+@(products: List[Product])(implicit messages: Messages)
+@main(Messages("application.name")) {
+  <dl class="products">
+  @for(product <- products) {
+    <dt>@product.name</dt>
+    <dd>@product.description</dd>
+  }
+  </dl>
+}
